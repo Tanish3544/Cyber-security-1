@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cyber Security Assessment and Protection System - Part 1</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       NAVIGATION BAR
+       Links: Home, Modules, Security Assessment, Quiz, About Part 1
+       ========================================================================= -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#home" class="brand">
+        <div class="brand-icon">🛡️</div>
+        <span>CyberSec Protection</span>
+        <span class="brand-badge">Part 1</span>
+      </a>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">☰</button>
+
+      <nav>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="#home" class="nav-link active">Home</a></li>
+          <li><a href="#modules" class="nav-link">Modules</a></li>
+          <li><a href="#assessment" class="nav-link">Security Assessment</a></li>
+          <li><a href="#quiz" class="nav-link">Quiz</a></li>
+          <li><a href="#about" class="nav-link">About Part 1</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- =========================================================================
+         SECTION 1: HOME PAGE / DASHBOARD CONSOLE
+         ========================================================================= -->
+    <section id="home" class="hero-section">
+      <div class="container">
+        <div class="console-status-bar">
+          <span class="status-dot"></span>
+          <span>SYSTEM ACTIVE &bull; CYBER DEFENSE CONSOLE &bull; PART 1 RELEASE</span>
+        </div>
+
+        <h1 class="hero-title">Cyber Security Assessment and Protection System</h1>
+        <p class="hero-subtitle">
+          An interactive cybersecurity assessment and endpoint protection platform. Evaluate your system's 
+          security posture, review active threat intelligence and mitigation protocols, and verify defense readiness 
+          across foundational attack vectors.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#assessment" class="btn btn-primary">Run Security Assessment</a>
+          <a href="#quiz" class="btn btn-outline">Launch Security Quiz</a>
+          <a href="#modules" class="btn btn-outline">Browse Protection Controls</a>
+        </div>
+
+        <!-- Dashboard Console Quick-Access Cards -->
+        <div class="system-grid">
+          <a href="#sec-malware" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">🦠</span>
+              <span class="sys-card-badge">Threat Analysis</span>
+            </div>
+            <h3>Malware & Viruses</h3>
+            <p>Detection and mitigation of viruses, worms, trojans, ransomware, and malicious infections.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#sec-pc-security" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">💻</span>
+              <span class="sys-card-badge">Endpoint Hardening</span>
+            </div>
+            <h3>Personal Computer Security</h3>
+            <p>OS protection safeguards, strong credential policies, antivirus defense, and safe browsing rules.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#sec-windows-update" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">🔄</span>
+              <span class="sys-card-badge">Patch Management</span>
+            </div>
+            <h3>Windows Update</h3>
+            <p>Vulnerability patching, risks of unpatched software, and systematic update verification.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#sec-attacks" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">⚡</span>
+              <span class="sys-card-badge">Attack Defense</span>
+            </div>
+            <h3>Cyber Attacks</h3>
+            <p>Countermeasures against phishing, credential brute forcing, social engineering, and DoS.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#sec-tailgating" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">🚪</span>
+              <span class="sys-card-badge">Physical Security</span>
+            </div>
+            <h3>Tailgating Attack</h3>
+            <p>Physical unauthorized entry mechanics, real-world breach scenarios, and facility access control.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#sec-ethical-recon" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">🕵️</span>
+              <span class="sys-card-badge">Security Audit</span>
+            </div>
+            <h3>Ethical Hacking & Recon</h3>
+            <p>Defensive ethical principles, audit boundaries, and the 7-step reconnaissance framework.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#sec-firewall" class="sys-card">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">🧱</span>
+              <span class="sys-card-badge">Perimeter Defense</span>
+            </div>
+            <h3>Windows Firewall</h3>
+            <p>Inbound and outbound network packet filtering, profile management, and port protection.</p>
+            <span class="sys-card-link">Inspect Controls &rarr;</span>
+          </a>
+
+          <a href="#assessment" class="sys-card" style="border-color: rgba(0, 229, 255, 0.45);">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">📊</span>
+              <span class="sys-card-badge" style="color: var(--cyber-green); border-color: rgba(0,230,118,0.4);">Interactive Audit</span>
+            </div>
+            <h3>Basic Security Assessment</h3>
+            <p>Run a 5-point evaluation to diagnose vulnerabilities and calculate your PC security score (0-100).</p>
+            <span class="sys-card-link" style="color: var(--cyber-green);">Start Evaluation &rarr;</span>
+          </a>
+
+          <a href="#quiz" class="sys-card" style="border-color: rgba(59, 130, 246, 0.45);">
+            <div class="sys-card-top">
+              <span class="sys-card-icon">📝</span>
+              <span class="sys-card-badge" style="color: var(--cyber-cyan);">Knowledge Check</span>
+            </div>
+            <h3>Cyber Security Quiz</h3>
+            <p>10-question evaluation covering all Part 1 topics with instant scoring and explanations.</p>
+            <span class="sys-card-link">Take Quiz &rarr;</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 2 TO 8: PROTECTION CONTROLS & THREAT ADVISORIES
+         ========================================================================= -->
+    <section id="modules" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag"><span>🔒</span> Threat Intelligence & Protection Controls</div>
+            <h2 class="section-title">Security & Protection Modules</h2>
+            <p class="section-desc">
+              Actionable threat definitions, vulnerability breakdowns, and defense protocols for personal computers.
+            </p>
+          </div>
+        </div>
+
+        <!-- TOPIC 1 & 2: MALWARE & VIRUSES -->
+        <article id="sec-malware" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">Threat Intel</span>
+              <h3 class="unit-title">Malware & Computer Viruses</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>🦠</span> Computer Virus</h4>
+              <p>A specific form of malicious code that replicates by attaching copies of itself into other executable programs or files. It remains dormant until a user executes the infected host program.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>⚠️</span> Computer Infection</h4>
+              <p>The state where malicious code compromises system integrity, modifies boot sectors or system registries, establishes persistent background processes, or degrades operating performance.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🛡️</span> Malware (Malicious Software)</h4>
+              <p>The umbrella classification for all intentionally hostile software designed to damage, hijack, or gain unauthorized access to computer systems, data, and networks.</p>
+            </div>
+          </div>
+
+          <!-- Technical Comparison: Virus vs Malware -->
+          <h4 style="color: var(--text-primary); margin: 20px 0 10px 0; font-size: 0.95rem; font-family: var(--font-mono); text-transform: uppercase;">
+            Analysis: Virus vs. Malware
+          </h4>
+          <div class="data-table-container">
+            <table class="sec-table">
+              <thead>
+                <tr>
+                  <th>Criteria</th>
+                  <th>Computer Virus</th>
+                  <th>Malware (Broad Category)</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>Scope</strong></td>
+                  <td>A single sub-category of malicious software.</td>
+                  <td>Comprehensive family covering all malicious threats.</td>
+                </tr>
+                <tr>
+                  <td><strong>Host Requirement</strong></td>
+                  <td>Requires a legitimate host program or file to attach itself to.</td>
+                  <td>Can be standalone (Worm) or disguised (Trojan); host file not required.</td>
+                </tr>
+                <tr>
+                  <td><strong>Execution Method</strong></td>
+                  <td>Requires human action to trigger (opening the infected program).</td>
+                  <td>Executes via network exploits, user actions, or automated scripts.</td>
+                </tr>
+                <tr>
+                  <td><strong>Relationship</strong></td>
+                  <td>Every computer virus is classified as malware.</td>
+                  <td>Not all malware is a virus (e.g., Spyware, Ransomware, Trojans).</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Specific Malware Vectors -->
+          <h4 style="color: var(--text-primary); margin: 20px 0 10px 0; font-size: 0.95rem; font-family: var(--font-mono); text-transform: uppercase;">
+            Malware Classification & Impact
+          </h4>
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>🐛</span> Worm</h4>
+              <p>Standalone malware capable of replicating across networks without human intervention or host file attachment, rapidly consuming bandwidth and exploiting open ports.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🎭</span> Trojan Horse</h4>
+              <p>Malicious software masquerading as useful, legitimate software (such as utilities, games, or media players) to trick the user into executing it, silently dropping backdoors.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>👁️</span> Spyware</h4>
+              <p>Covert software that monitors user activities, records keystrokes (keylogger), logs internet browsing habits, and harvests passwords without user consent.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🔒</span> Ransomware</h4>
+              <p>Extortion malware that encrypts high-value user files using strong cryptographic ciphers, rendering them inaccessible until an extortion fee (ransom) is paid.</p>
+            </div>
+          </div>
+
+          <div class="protection-protocol">
+            <span>🛡️</span>
+            <div>
+              <strong>Protection Protocol:</strong> Deploy an active real-time antivirus engine, block untrusted executable downloads, isolate suspicious email attachments in sandbox environments, and maintain offline immutable file backups.
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC 3 & 4: PERSONAL COMPUTER & OS SECURITY -->
+        <article id="sec-pc-security" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">System Hardening</span>
+              <h3 class="unit-title">Personal Computer & Operating System Security</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>🎯</span> Importance of PC Security</h4>
+              <p>Personal computers store sensitive credentials, private documents, and financial data. Securing endpoints prevents identity theft, data extortion, and unauthorized network pivot attacks.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🛡️</span> OS Security & Privilege Control</h4>
+              <p>Enforce the Principle of Least Privilege. Use standard user accounts for everyday tasks and keep User Account Control (UAC) enabled to prevent silent administrative changes.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🔑</span> Strong Credential Management</h4>
+              <p>Utilize 14+ character passphrases combining uppercase, lowercase, numbers, and symbols. Never reuse credentials across services, and activate Multi-Factor Authentication (MFA).</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🔍</span> Security Software Deployment</h4>
+              <p>Keep Windows Defender Antivirus or certified EDR security software running continuously. Ensure daily definition updates to recognize new threat signatures.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🌐</span> Safe Web Browsing Standards</h4>
+              <p>Verify HTTPS encrypted connections, block intrusive third-party tracking scripts, avoid untrusted browser extensions, and heed browser SSL certificate warnings.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🚫</span> Avoiding Suspicious Files & Links</h4>
+              <p>Verify file extensions (watch for hidden extensions like <code>report.pdf.exe</code>), disable automatic Office macros, and hover over hyperlink URLs before clicking.</p>
+            </div>
+          </div>
+
+          <div class="protection-protocol">
+            <span>🔒</span>
+            <div>
+              <strong>Physical Endpoint Practice:</strong> Always lock your workstation session (press <code>Win + L</code> on Windows) when stepping away to prevent local unauthorized access.
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC 5: WINDOWS UPDATE -->
+        <article id="sec-windows-update" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">Patch Management</span>
+              <h3 class="unit-title">Windows Update & Vulnerability Mitigation</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>⚙️</span> What Windows Update Is</h4>
+              <p>An integrated OS maintenance service from Microsoft that distributes critical security patches, driver fixes, and stability improvements directly to your computer over encrypted channels.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🎯</span> Why Updates Are Essential</h4>
+              <p>When security vulnerabilities (CVEs) are publicly discovered, threat actors weaponize them. Windows Update closes these vulnerabilities before exploits can compromise your system.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🩹</span> Security Patches vs Feature Updates</h4>
+              <p><strong>Security Patches:</strong> Resolve critical code vulnerabilities and zero-day exploits.<br><strong>Feature Updates:</strong> Provide operating system upgrades and functionality revisions.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>⚠️</span> Hazards of Outdated Software</h4>
+              <p>Unpatched operating systems are vulnerable to remote code execution (RCE), privilege escalation, and automated worm attacks (such as WannaCry exploiting unpatched SMBv1 ports).</p>
+            </div>
+          </div>
+
+          <!-- Step-by-Step Update Verification -->
+          <div class="sec-card" style="margin-top: 14px;">
+            <h4 style="color: var(--cyber-cyan); margin-bottom: 8px;">Standard Procedure: Checking for Windows Updates</h4>
+            <ol style="padding-left: 20px; font-size: 0.88rem; color: var(--text-secondary); line-height: 1.8;">
+              <li>Press the <strong>Windows Key</strong> or open the Start Menu.</li>
+              <li>Open <strong>Settings</strong> (or press <code>Win + I</code>).</li>
+              <li>Select <strong>Windows Update</strong> (Windows 11) or <strong>Update & Security</strong> (Windows 10).</li>
+              <li>Click the <strong>Check for updates</strong> button.</li>
+              <li>Allow the system to download and install security patches, then restart if required.</li>
+            </ol>
+          </div>
+
+          <div class="risk-alert protection-protocol" style="margin-top: 14px;">
+            <span>⚠️</span>
+            <div>
+              <strong>Vulnerability Window:</strong> Delaying updates after security patches are released leaves your device exposed to reverse-engineered exploits. Keep automated updates enabled!
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC 6: TYPES OF CYBER ATTACKS -->
+        <article id="sec-attacks" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">Threat Defense</span>
+              <h3 class="unit-title">Cyber Attack Vectors & Defensive Countermeasures</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>🎣</span> Phishing Attacks</h4>
+              <p>Social engineering attacks delivered through fraudulent emails, SMS (smishing), or cloned websites designed to trick targets into handing over login credentials or financial information.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>💣</span> Malware Attacks</h4>
+              <p>Deliberate distribution of malicious binaries through drive-by browser downloads, malicious USB devices, or infected torrent files to seize system command and control.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🔑</span> Password Attacks</h4>
+              <p>Automated attempts to crack credentials using <em>Brute Force</em> (trying every permutation), <em>Dictionary Attacks</em> (testing common passwords), or <em>Credential Stuffing</em> from breached data.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>👥</span> Social Engineering</h4>
+              <p>Exploiting human psychology—such as urgency, trust, authority, or panic—to manipulate individuals into bypassing security safeguards or divulging confidential data.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🚫</span> Denial of Service (DoS)</h4>
+              <p>Flooding target servers or network interfaces with overwhelming dummy traffic to exhaust network bandwidth and hardware resources, blocking legitimate user access.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🛡️</span> Defensive Countermeasures</h4>
+              <p>Enforce Multi-Factor Authentication (MFA), deploy email spam filters, establish strong password complexity policies, and filter incoming traffic using firewalls.</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC 7: TAILGATING ATTACK -->
+        <article id="sec-tailgating" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">Physical Security</span>
+              <h3 class="unit-title">Tailgating Attack: Physical Perimeter Breach</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>🚶</span> Definition</h4>
+              <p><strong>Tailgating</strong> (also known as <em>Piggybacking</em>) is a physical security breach where an unauthorized individual closely follows an authorized employee through a secured access door or barrier without presenting valid credentials.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🎭</span> Attack Mechanism</h4>
+              <p>The intruder relies on human courtesy and social pressure. They may pretend to be in a rush, carry bulky items, dress as delivery staff, or feign a lost keycard to induce an employee into holding the door.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🏢</span> Scenario Example</h4>
+              <p>An intruder wearing a fake courier uniform carrying a package approaches a restricted lab entrance just as an authorized engineer scans their access card. The engineer holds the door open out of politeness, letting the intruder enter without scanning.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>⚠️</span> Critical Risks</h4>
+              <p>Physical access renders software defenses vulnerable: an intruder can deploy hardware keyloggers, insert rogue USB payloads into workstations, steal paper documents, or tamper with networking equipment.</p>
+            </div>
+          </div>
+
+          <div class="protection-protocol">
+            <span>🛑</span>
+            <div>
+              <strong>Prevention Controls:</strong> Install optical turnstiles or access mantraps, enforce a strict "One Badge, One Person" policy, train personnel to challenge unbadged individuals, and position security guard checkpoints at entries.
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC 8 & 9: ETHICAL HACKING & 7 STEPS OF RECONNAISSANCE -->
+        <article id="sec-ethical-recon" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">Audit & Assessment</span>
+              <h3 class="unit-title">Ethical Hacking & 7 Steps of Reconnaissance</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>⚖️</span> What Ethical Hacking Is</h4>
+              <p>The practice of utilizing authorized penetration testing techniques to evaluate system security, uncover vulnerabilities, and report flaws to the organization for remediation before malicious actors exploit them.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🤝</span> Ethical vs Unauthorized Hacking</h4>
+              <p><strong>Ethical (White Hat):</strong> Authorized with written legal scope, responsible disclosure, defensive intent.<br><strong>Unauthorized (Black Hat):</strong> Unauthorized, illegal access, malicious intent, data extortion or theft.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🎯</span> Defensive Purpose</h4>
+              <p>To identify misconfigurations and patchable vulnerabilities proactively, test defensive detection readiness, validate compliance, and harden organizational resilience.</p>
+            </div>
+          </div>
+
+          <!-- The 7 Steps of Reconnaissance Console -->
+          <h4 style="color: var(--text-primary); margin: 20px 0 10px 0; font-size: 0.95rem; font-family: var(--font-mono); text-transform: uppercase;">
+            Defensive Methodology: 7 Steps of Reconnaissance
+          </h4>
+          <div class="recon-grid">
+            <div class="recon-step">
+              <div class="recon-num">01 // RECON</div>
+              <h5>Footprinting</h5>
+              <p>Collecting publicly accessible target information (DNS records, WHOIS, public documents) passively without direct engagement.</p>
+            </div>
+
+            <div class="recon-step">
+              <div class="recon-num">02 // SCAN</div>
+              <h5>Network Scanning</h5>
+              <p>Pinging and checking live host availability across authorized IP ranges to discover active systems.</p>
+            </div>
+
+            <div class="recon-step">
+              <div class="recon-num">03 // PROBE</div>
+              <h5>Port Scanning</h5>
+              <p>Inspecting open TCP and UDP communication ports to assess potential communication entry points.</p>
+            </div>
+
+            <div class="recon-step">
+              <div class="recon-num">04 // IDENT</div>
+              <h5>Service & Banner Grabbing</h5>
+              <p>Interrogating open ports to determine service names and exact software versions for vulnerability correlation.</p>
+            </div>
+
+            <div class="recon-step">
+              <div class="recon-num">05 // PROFILE</div>
+              <h5>OS Fingerprinting</h5>
+              <p>Analyzing TCP/IP packet header signatures (TTL values, window sizes) to identify target operating systems.</p>
+            </div>
+
+            <div class="recon-step">
+              <div class="recon-num">06 // QUERY</div>
+              <h5>Enumeration</h5>
+              <p>Querying accessible resources such as network shares, user groups, and directories to identify exposed access points.</p>
+            </div>
+
+            <div class="recon-step">
+              <div class="recon-num">07 // REPORT</div>
+              <h5>Vulnerability Analysis</h5>
+              <p>Cross-referencing discovered service versions against CVE databases to compile actionable risk remediation reports.</p>
+            </div>
+          </div>
+
+          <div class="protection-protocol" style="margin-top: 16px;">
+            <span>⚖️</span>
+            <div>
+              <strong>Legal Compliance Notice:</strong> Performing network scanning, port probing, or vulnerability assessments on systems without explicit written consent is illegal. This reconnaissance framework is strictly used for defensive auditing of authorized assets.
+            </div>
+          </div>
+        </article>
+
+        <!-- TOPIC 10: WINDOWS FIREWALL -->
+        <article id="sec-firewall" class="protection-unit">
+          <div class="unit-header">
+            <div class="unit-title-wrap">
+              <span class="unit-tag">Perimeter Defense</span>
+              <h3 class="unit-title">Windows Firewall: Packet Filtering & Protection</h3>
+            </div>
+          </div>
+
+          <div class="security-grid">
+            <div class="sec-card">
+              <h4><span>🧱</span> What a Firewall Is</h4>
+              <p>A network security system that inspects incoming and outgoing packet traffic and decides whether to permit or drop specific transmissions based on predetermined security filtering rules.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>💡</span> Why a Firewall Is Essential</h4>
+              <p>Without a firewall, any open network port on your operating system is exposed to external probes, worms, and unauthorized remote access attempts on the local subnet or internet.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>🔄</span> Inbound vs Outbound Filtering</h4>
+              <p><strong>Inbound Traffic:</strong> Inspects packets sent to your device, blocking unsolicited connection probes.<br><strong>Outbound Traffic:</strong> Monitors connections originating from your device, preventing malware from communicating with Command & Control servers.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>💻</span> Windows Defender Firewall</h4>
+              <p>Built-in stateful firewall providing tailored security profiles: <em>Domain</em> (work network), <em>Private</em> (trusted home network), and <em>Public</em> (untrusted airports/cafes with heightened inbound blocks).</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>⚙️</span> Basic Configuration Rules</h4>
+              <p>Configuring rule-based port blocking, managing application access lists, and enabling logging to track dropped packet attempts.</p>
+            </div>
+
+            <div class="sec-card">
+              <h4><span>✨</span> System Protection Benefits</h4>
+              <p>Shields vulnerable system services from network exploitation, stops rogue background processes from leaking data, and prevents unauthorized port connections.</p>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 9: INTERACTIVE SECURITY ASSESSMENT (POSTURE EVALUATION SCANNER)
+         ========================================================================= -->
+    <section id="assessment" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag"><span>📊</span> System Diagnostic & Posture Evaluation</div>
+            <h2 class="section-title">Basic Security Assessment</h2>
+            <p class="section-desc">
+              Evaluate your endpoint security controls across 5 key defense parameters to calculate your security health score.
+            </p>
+          </div>
+        </div>
+
+        <div class="scanner-console">
+          <!-- Diagnostic Status Bar -->
+          <div class="scanner-header-bar">
+            <span>ASSESSMENT ENGINE: READY</span>
+            <span>DIAGNOSTIC CRITERIA: 5 CHECKPOINTS</span>
+            <span>MAXIMUM SCORE: 100 PTS</span>
+          </div>
+
+          <!-- Educational Disclaimer Banner -->
+          <div class="scanner-disclaimer">
+            <span>ℹ️</span>
+            <div>
+              <strong>Security Disclaimer:</strong> This assessment is an educational self-evaluation tool designed to assess personal computer hygiene and baseline safeguards. It does NOT constitute a certified professional cybersecurity audit.
+            </div>
+          </div>
+
+          <form id="assessmentForm" onsubmit="return false;">
+            <!-- Checkpoint 1: Firewall -->
+            <div class="audit-group">
+              <div class="audit-q">1. Is your Windows Firewall (or OS packet filtering) active?</div>
+              <div class="audit-help">Filters unsolicited inbound probes and unauthorized outbound traffic.</div>
+              <div class="options-row">
+                <label class="opt-pill">
+                  <input type="radio" name="firewall" value="20">
+                  <span>Enabled on all network profiles</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="firewall" value="10">
+                  <span>Not sure / Default settings</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="firewall" value="0">
+                  <span>Disabled / Turned off</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Checkpoint 2: Windows Update -->
+            <div class="audit-group">
+              <div class="audit-q">2. How regularly do you install Windows Updates and security patches?</div>
+              <div class="audit-help">Closes known zero-day vulnerabilities and system exploits.</div>
+              <div class="options-row">
+                <label class="opt-pill">
+                  <input type="radio" name="windows_update" value="20">
+                  <span>Automatic updates enabled</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="windows_update" value="10">
+                  <span>Manual updates when reminded</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="windows_update" value="0">
+                  <span>Rarely or never updated</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Checkpoint 3: Passwords -->
+            <div class="audit-group">
+              <div class="audit-q">3. What is the strength and uniqueness of your account passwords?</div>
+              <div class="audit-help">Prevents automated brute-force, dictionary, and credential stuffing attacks.</div>
+              <div class="options-row">
+                <label class="opt-pill">
+                  <input type="radio" name="password" value="20">
+                  <span>14+ chars, unique per service + MFA</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="password" value="10">
+                  <span>Moderate length, some reused</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="password" value="0">
+                  <span>Simple words, birthdays, short PINs</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Checkpoint 4: Suspicious Links & Attachments -->
+            <div class="audit-group">
+              <div class="audit-q">4. How strictly do you verify suspicious email links, unexpected files, and attachments?</div>
+              <div class="audit-help">Primary defense against phishing, ransomware droppers, and Trojan delivery.</div>
+              <div class="options-row">
+                <label class="opt-pill">
+                  <input type="radio" name="suspicious_links" value="20">
+                  <span>Always inspect sender addresses & URLs</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="suspicious_links" value="10">
+                  <span>Usually careful, occasionally click</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="suspicious_links" value="0">
+                  <span>Frequently open unknown links/files</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Checkpoint 5: Security Software -->
+            <div class="audit-group">
+              <div class="audit-q">5. Is active real-time security software (e.g., Windows Defender) operational?</div>
+              <div class="audit-help">Scans processes, signatures, and file payloads for malware indicators.</div>
+              <div class="options-row">
+                <label class="opt-pill">
+                  <input type="radio" name="security_software" value="20">
+                  <span>Active with daily updated definitions</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="security_software" value="10">
+                  <span>Installed but status rarely checked</span>
+                </label>
+                <label class="opt-pill">
+                  <input type="radio" name="security_software" value="0">
+                  <span>None installed or real-time protection off</span>
+                </label>
+              </div>
+            </div>
+
+            <!-- Execution Buttons -->
+            <div style="display: flex; gap: 12px; margin-top: 10px; flex-wrap: wrap;">
+              <button type="button" id="calculateScoreBtn" class="btn btn-primary">Calculate Security Score</button>
+              <button type="button" id="resetAssessmentBtn" class="btn btn-outline">Reset Assessment</button>
+            </div>
+          </form>
+
+          <!-- Score Output Panel -->
+          <div id="assessmentResult" class="assessment-output">
+            <div class="score-panel">
+              <div>
+                <div style="font-family: var(--font-mono); font-size: 0.76rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 2px;">
+                  POSTURE RATING
+                </div>
+                <div class="score-num-wrap">
+                  <span class="score-val" id="scoreValue">0</span>
+                  <span class="score-base">/ 100</span>
+                </div>
+              </div>
+              <span id="statusBadge" class="score-tier tier-good">Good</span>
+            </div>
+
+            <p id="summaryText" style="color: var(--text-primary); font-size: 0.95rem; margin-bottom: 12px; font-weight: 500;"></p>
+            <div id="tipsContainer">
+              <strong style="color: var(--cyber-cyan); font-size: 0.88rem; text-transform: uppercase; font-family: var(--font-mono);">
+                Targeted Mitigation Steps:
+              </strong>
+              <ul id="assessmentTipsList" class="remediation-list"></ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 10: CYBER SECURITY QUIZ (KNOWLEDGE VERIFICATION)
+         ========================================================================= -->
+    <section id="quiz" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag"><span>📝</span> Readiness Verification</div>
+            <h2 class="section-title">Cyber Security Quiz</h2>
+            <p class="section-desc">
+              10 multiple-choice questions evaluating your understanding of Part 1 topics with instant feedback.
+            </p>
+          </div>
+        </div>
+
+        <div class="quiz-console">
+          <div class="quiz-console-bar">
+            <span>QUESTION COUNT: 10 MCQs</span>
+            <span>PASSING THRESHOLD: 70%</span>
+            <span>SCOPE: PART 1 TOPICS ONLY</span>
+          </div>
+
+          <!-- Dynamic Quiz Container -->
+          <div id="quizContainer"></div>
+
+          <!-- Quiz Controls -->
+          <div style="margin-top: 20px; display: flex; gap: 12px;">
+            <button type="button" id="submitQuizBtn" class="btn btn-primary">Submit Answers</button>
+            <button type="button" id="resetQuizBtn" class="btn btn-outline" style="display: none;">Try Again</button>
+          </div>
+
+          <!-- Quiz Result Banner -->
+          <div id="quizResultBanner" class="quiz-score-banner">
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; text-transform: uppercase; color: var(--text-muted); margin-bottom: 4px;">
+              EVALUATION COMPLETED
+            </div>
+            <div class="quiz-score-digit" id="quizFinalScore">0 / 10</div>
+            <p id="quizRemark" style="color: var(--text-primary); font-size: 0.95rem;"></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         SECTION 11: ABOUT PART 1
+         ========================================================================= -->
+    <section id="about" class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <div class="section-tag"><span>ℹ️</span> Scope Specification</div>
+            <h2 class="section-title">About Part 1</h2>
+            <p class="section-desc">Submission release scope, technology constraints, and roadmap notice.</p>
+          </div>
+        </div>
+
+        <div class="about-panel">
+          <!-- Required Mandatory Statement -->
+          <div class="mandatory-quote">
+            "This is Part 1 of the Cyber Security Assessment and Protection System. It currently covers the cybersecurity topics completed in the first phase of the course. Additional modules will be added in later phases."
+          </div>
+
+          <div class="about-columns">
+            <div class="col-card">
+              <h4>🎯 Included Scope (Part 1)</h4>
+              <ul>
+                <li>Computer Viruses and Computer Infections</li>
+                <li>Malware Types (Worm, Trojan, Spyware, Ransomware)</li>
+                <li>Securing Personal Computers & OS</li>
+                <li>Windows Update & Patch Management</li>
+                <li>Types of Cyber Attacks (Phishing, Password, DoS)</li>
+                <li>Tailgating Physical Attack</li>
+                <li>Ethical Hacking & 7 Steps of Reconnaissance</li>
+                <li>Windows Firewall</li>
+                <li>Basic Security Assessment (Score /100)</li>
+                <li>Cyber Security Quiz (10 MCQs)</li>
+              </ul>
+            </div>
+
+            <div class="col-card">
+              <h4>🛠️ System Architecture</h4>
+              <ul>
+                <li><strong>Markup:</strong> Semantic HTML5</li>
+                <li><strong>Styling:</strong> Pure CSS3 with cybersecurity console design</li>
+                <li><strong>Logic:</strong> Vanilla JavaScript (Zero external libraries)</li>
+                <li><strong>Dependencies:</strong> Completely standalone (No React, Node.js, or DB)</li>
+                <li><strong>Runtime:</strong> Runs natively offline in any modern web browser</li>
+              </ul>
+            </div>
+
+            <div class="col-card">
+              <h4>🔮 Future Modules (Part 2 Expansion)</h4>
+              <ul>
+                <li>Local Area Network (LAN) Security</li>
+                <li>Remote Network Security & Virtual Private Networks (VPN)</li>
+                <li>VirtualBox Sandboxes & Virtual Lab Environments</li>
+                <li>Advanced Cybersecurity Tools & Network Packet Sniffers</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p><strong>Cyber Security Assessment and Protection System</strong> &bull; Part 1 Release</p>
+      <p style="margin-top: 4px; color: var(--text-dim);">Pure HTML / CSS / JavaScript &bull; All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
